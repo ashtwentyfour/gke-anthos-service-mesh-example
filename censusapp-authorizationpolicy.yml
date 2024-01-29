@@ -1,0 +1,22 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: authorization-policy
+  namespace: census
+spec:
+  selector:
+    matchLabels:
+      app: spring-census
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        requestPrincipals: ["testing@secure.istio.io/testing@secure.istio.io"]
+    to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/data/census/*", "/actuator/health"]
+    - operation:
+        methods: ["POST"]
+        paths: ["/data/census/add"]
+        

@@ -1,0 +1,22 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: spring-census
+  namespace: census
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - ingress/mesh-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /data/census
+    - uri:
+        exact: /actuator/health
+    route:
+    - destination:
+        host: spring-census
+        port:
+          number: 8080
+        subset: v1

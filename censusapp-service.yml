@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-census
+  namespace: census
+spec:
+  selector:
+    app: spring-census
+  ports:
+    - protocol: TCP
+      port: 8080
+      name: http
+      targetPort: 8080
