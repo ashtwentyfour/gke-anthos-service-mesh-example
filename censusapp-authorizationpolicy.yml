@@ -11,7 +11,7 @@ spec:
   rules:
   - from:
     - source:
-        requestPrincipals: ["testing@secure.istio.io/testing@secure.istio.io"]
+        requestPrincipals: ["https://dev-n8xq5t40atbepes2.us.auth0.com/Uzc2CtRPjXHU97cIkXLWKOlhA6cRAhyK@clients"]
     to:
     - operation:
         methods: ["GET"]

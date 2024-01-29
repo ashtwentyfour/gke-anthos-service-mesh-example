@@ -8,6 +8,6 @@ spec:
     matchLabels:
       app: spring-census
   jwtRules:
-  - issuer: "testing@secure.istio.io"
-    jwksUri: "https://raw.githubusercontent.com/istio/istio/release-1.8/security/tools/jwt/samples/jwks.json"
+  - issuer: "https://dev-n8xq5t40atbepes2.us.auth0.com/"
+    jwksUri: "https://dev-n8xq5t40atbepes2.us.auth0.com/.well-known/jwks.json"
     
