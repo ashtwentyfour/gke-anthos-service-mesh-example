@@ -98,7 +98,7 @@ $ Make calls to the service via the Load Balancer (Use a valid [Auth0](https://a
 ```
 $ curl -v http://34.123.162.31/actuator/health -H "Authorization: Bearer $TOKEN"
 
-$ curl -v http://34.123.162.31/actuator/health -H "Authorization: Bearer $TOKEN"
-
 $ curl -v -X POST http://34.123.162.31/data/census/add -d county=Rensselaer -d state=NY -d population=1234890 -d populationmen=500010 -d tractId=590365888 -d year=2018 -H "Authorization: Bearer $TOKEN"
+
+$ curl -v http://34.123.162.31/data/census/all -H "Authorization: Bearer $TOKEN"
 ```
