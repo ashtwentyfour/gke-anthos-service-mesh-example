@@ -11,7 +11,7 @@ spec:
   rules:
   - from:
     - source:
-        requestPrincipals: ["https://dev-n8xq5t40atbepes2.us.auth0.com/Uzc2CtRPjXHU97cIkXLWKOlhA6cRAhyK@clients"]
+        requestPrincipals: ["https://dev-n8xq5t40atbepes2.us.auth0.com/*"]
     to:
     - operation:
         methods: ["GET"]
